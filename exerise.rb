@@ -2,4 +2,7 @@ song_data =  {"kind"=>"playlist", "id"=>405726, "created_at"=>"2010/11/02 09:24:
 
 puts song_data.keys
 puts song_data["tracks"]
-tracks = song_data["tracks"].count
+tracks = song_data["tracks"]
+puts tracks.count
+duration = tracks.map { |track| track["duration_in_milliseconds"] }.sum
+puts duration
